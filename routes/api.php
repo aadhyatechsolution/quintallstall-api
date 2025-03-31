@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApmcController;
+use App\Http\Controllers\RoleController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('apmc', ApmcController::class);
+Route::resource('user', UserController::class);
+Route::resource('role', RoleController::class);
